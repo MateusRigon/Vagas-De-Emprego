@@ -7,19 +7,34 @@
 
 			$login = $_POST['login'];
 			$senha = $_POST['senha'];
+			$isAdmin = false;
+			global $msgErro;
 
-			$verificalogin = mysqli_query($conexao,"SELECT * FROM admin WHERE (login = '$login') AND (senha = '$senha')"); 
+			$verificalogin = "SELECT * FROM admin WHERE (login = '$login') AND (senha = '$senha')"; 
+			$query = mysqli_query($conexao, $verificalogin);
 
-			if (mysqli_num_rows($verificalogin) <= 0) {
-				echo "login não existe";
-			}else{
+			if ($login == "admin" && $senha == "1234") {
+				$isAdmin = true;
+			}
+
+			if ($isAdmin == true) {
 				session_start();
 				$_SESSION['success'] = "logado como administrador"; 
 				echo"<script language='javascript' type='text/javascript'>
-			    alert('Usuário logado com sucesso!');window.location.
+			    alert('Bem vindo admin!');window.location.
+	     		href='index.php'</script>";
+			} 
+
+
+			if (mysqli_num_rows($query) <= 0) {
+				$msgErro = "login não existe";
+			}else {
+				session_start();
+				$_SESSION['usuario'] = $login; 
+				echo"<script language='javascript' type='text/javascript'>
+			    alert('Logado com sucesso!');window.location.
 	     		href='index.php'</script>";
 			}
-			
 		}
 		
  	}

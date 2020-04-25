@@ -44,6 +44,7 @@
 	<?php 
 		if (isset($_POST['criar'])) {
 			$cad->cadastrar();
+			echo $msgDeSucesso;
 		}
 	 ?>
 
