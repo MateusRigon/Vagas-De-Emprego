@@ -8,20 +8,23 @@
 	 		$titulo = $_POST['titulo']; 
 	 		$descricao = $_POST['descricao'];
 	 		$salario = $_POST['salario'];
+	 		$cidade = $_POST['cidade'];
 	 		global $msgDeSucesso;
 
-	 		$cadastrar = "INSERT INTO vagas(titulo,descricao,salario) VALUES ('$titulo','$descricao','$salario')";
+	 		$cadastrar = "INSERT INTO vagas(titulo,descricao,salario,cidade) VALUES ('$titulo','$descricao','$salario','$cidade')";
 	 		$query = mysqli_query($conexao, $cadastrar);
 
 	 		if ($query) {
 	 			$msgDeSucesso = "Vaga cadastrada com sucesso!";	
+	 		}else{
+	 			echo "erro ao cadastrar";
 	 		}
 	 	}
 
 	 	public function exibeVagas(){
 	 		require_once 'db.php';
 
-	 		$dado = "SELECT titulo,descricao,salario FROM vagas";
+	 		$dado = "SELECT titulo,descricao,salario,cidade FROM vagas";
 	 		$query = mysqli_query($conexao,$dado);
 	 		$array = mysqli_fetch_assoc($query);
 	 		// calcula quantos dados retornaram
@@ -33,15 +36,14 @@
 		 		if ($total > 0) {
 		 			do {
 		 		?>
-		 				<div id="vagas" class="mb-5">
-		 					<div class="col-lg-12 col-md-12">
-		 						<div class="mt-5 mb-5">
-		 							<h3><?php echo $array['titulo'];?></h3>
+		 				<div id="coluna" class="col-lg-4 col-md-6 col-sm-10 col-10">		
+		 					<div id="vagas" class="">
+		 							<button class="btn btn-outline-success active" id="titulo"><?php echo $array['titulo'];?></button>
+		 						
+									<div id="descricao"><li><?php echo $array['descricao'];?> <a href=""></a></li></div>
 		 							<hr>
-		 							<p><?php echo $array['descricao'];?> <a href=""></a></p>
-		 							<hr>
-		 							<h5>Salário: R$ <?php echo $array['salario'];?></h5>
-		 						</div>
+		 							<div id="salario">R$ <?php echo $array['salario'];?> - <?php echo $array['cidade'];?></div>
+
 		 					</div>
 		 				</div>
 

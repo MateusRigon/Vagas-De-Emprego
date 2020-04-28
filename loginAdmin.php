@@ -16,15 +16,23 @@
 	<title>Login</title>
 </head>
 <body>
+	<div id="colunalogin" class="col-lg-6 col-md-6 col-sm-8 col-10">
+	<div class="container">
+		<section class="d-flex justify-content-center">
+			<h1>Login</h1>	
+		</section>
+		
 	<div id="formlogin" class="form-group d-flex justify-content-center">
 		<form method="POST">
 			<input class="d-flex mb-3" type="text" placeholder="login" name="login" required> 
 			<input class="d-flex mb-3" type="password" placeholder="senha" name="senha" required>
-			<input class="d-flex ml-5" type="submit" value="ENTRAR" name="entrar">
-		</form>  
+			<input id="entrar" class="d-flex" type="submit" value="ENTRAR" name="entrar">
+		</form> 
 	</div>
-
-	<a class="d-flex justify-content-center" href="index.php">Cancelar</a>
+	<a class="d-flex justify-content-center" href="index.php">Cancelar</a>	
+	</div>
+</div>	
+	
 <?php 
 	if(isset($_POST['entrar'])){
 		$u->logar();

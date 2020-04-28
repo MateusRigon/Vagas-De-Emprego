@@ -1,3 +1,29 @@
-#formlogin{
-	margin-top: 15rem;
+.container{
+	background-color: white;
+	height: 30rem;
+	padding-top: 6vw;
+}
+#colunalogin{
+	margin-left: 25vw;
+	margin-top: 4rem;
+}
+@media only screen and (max-width: 500px) { 
+  .container{ height: 20rem; }
+  #colunalogin{margin: 8rem 8%;}
+} 
+body{
+	background-color: #f1f1f1;
+}
+
+input{
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid #f1f1f1;
+  width: 20rem;
+  outline: none;
+  padding-left: 12px;
+  font-size: 20px;
+}
+#entrar{
+	padding-left: 38%;
 }

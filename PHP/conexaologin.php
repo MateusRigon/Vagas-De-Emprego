@@ -19,7 +19,7 @@
 
 			if ($isAdmin == true) {
 				session_start();
-				$_SESSION['success'] = "logado como administrador"; 
+				$_SESSION['success'] = "Logado como administrador"; 
 				echo"<script language='javascript' type='text/javascript'>
 			    alert('Bem vindo admin!');window.location.
 	     		href='index.php'</script>";

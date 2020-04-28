@@ -31,26 +31,32 @@
 	<!-- Logado como admin -->
 	<?php if (isset($_SESSION['success'])) {?>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  			<a class="navbar-brand" href="#">VagasOnline.com</a>
+  			<h2 id="logo" href="#">VagasOnline.com</h2>
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			    <span class="navbar-toggler-icon"></span>
  			  </button>
 
 	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-	    <ul class="navbar-nav mr-auto">
+	    <ul id="successmsg" class="navbar-nav mr-auto">
 	      		<?php echo $_SESSION['success']; ?>
-	      <li class="nav-item dropdown">
+	    </ul>
+    	  <section class="nav-item dropdown">
 	     	 <button onclick="location.href='criarvaga.php';" class="btn btn-outline-success my-2 my-sm-0" id="newvaga">+ NOVA VAGA</button>
-	      </li>
-    </ul>
+	      </section>
 	    <form method="POST" class="form-inline my-2 my-lg-0">
 	      <button class="btn btn-outline-success my-2 my-sm-0" id="sair" type="submit" name="sair">Sair</button>
 	    </form>
   </div>
 </nav>
+		
+		
+			
 	
 
-
+			<div id="h1vagas">
+				<h1>Encontre as melhores vagas do mercado</h1>
+			</div>
+			
 		</div>
 	<?php } ?>
 
@@ -73,7 +79,7 @@
 		</div>
 		
 	<?php endif ?>
-	
+		
 	<?php 
 		$vaga->exibeVagas();
 

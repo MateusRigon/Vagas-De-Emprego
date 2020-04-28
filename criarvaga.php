@@ -34,8 +34,9 @@
 	<div id="form" class="form-group d-flex justify-content-center">
 		<form method="POST">
 			<input class="d-flex" type="text" placeholder="TITULO" name="titulo" required>
-			<input class="d-flex" type="text" placeholder="DESCRIÇÃO" name="descricao" required>
+			<input id="descricao" class="d-flex" type="text" placeholder="DESCRIÇÃO" name="descricao" required>
 			<input class="d-flex" type="text" placeholder="SALARIO" name="salario" required>
+			<input class="d-flex" type="text" placeholder="CIDADE" name="cidade" required>
 			<input class="d-flex" type="submit" value="CRIAR" name="criar">
 			<a class="d-flex justify-content-center" href="index.php">Cancelar</a>
 		</form>
