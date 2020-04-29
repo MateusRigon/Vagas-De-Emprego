@@ -1,1 +1,12 @@
-
+#successmsg{
+	margin-left: 60vw;
+}
+body{
+	background-color: #f1f1f1;
+}
+#col-principal{
+	padding: 0;
+}
+#form{
+	margin-top: 12vw;
+}

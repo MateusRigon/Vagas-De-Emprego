@@ -1,9 +1,11 @@
 .container-fluid{
-	background-color: #f1f1f1;
 	height: auto;
 }
+body{
+	background-color: #f1f1f1;
+}
 #loginbutton{
-	margin: 5vw;
+	margin-left: 70vw;
 }
 #vagas{
 	display: block;
@@ -61,10 +63,16 @@ hr{
 #successmsg{
 	margin-left: 44vw;
 }
+#loginmsg{
+	margin-left: 61vw;
+}
 #logo{
 	margin-left: 20px;
 }
 #col-principal{
 	height: 25rem;
 	margin-bottom: 5vw;
+}
+#coluna{
+	float: left;
 }

@@ -23,70 +23,97 @@
     <link rel="stylesheet" type="text/css" href="CSS/home.css">
 	<title>Página Inicial</title>
 </head>
-<body>
-	<div class="container-fluid">
-		<div class="row">
-			<div id="col-principal" class="col-lg-12">
-		
+<body>		
 	<!-- Logado como admin -->
 	<?php if (isset($_SESSION['success'])) {?>
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  			<h2 id="logo" href="#">VagasOnline.com</h2>
-			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			    <span class="navbar-toggler-icon"></span>
- 			  </button>
+		<div class="container-fluid">
+			<div class="row">
+				<div id="col-principal" class="col-lg-12">
+				<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		  			<h2 id="logo" href="#">VagasOnline.com</h2>
+					  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					    <span class="navbar-toggler-icon"></span>
+		 			  </button>
 
-	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-	    <ul id="successmsg" class="navbar-nav mr-auto">
-	      		<?php echo $_SESSION['success']; ?>
-	    </ul>
-    	  <section class="nav-item dropdown">
-	     	 <button onclick="location.href='criarvaga.php';" class="btn btn-outline-success my-2 my-sm-0" id="newvaga">+ NOVA VAGA</button>
-	      </section>
-	    <form method="POST" class="form-inline my-2 my-lg-0">
-	      <button class="btn btn-outline-success my-2 my-sm-0" id="sair" type="submit" name="sair">Sair</button>
-	    </form>
-  </div>
-</nav>
-		
-		
-			
-	
-
-			<div id="h1vagas">
-				<h1>Encontre as melhores vagas do mercado</h1>
+						  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+						    <ul id="successmsg" class="navbar-nav mr-auto">
+						      		<?php echo $_SESSION['success']; ?>
+						    </ul>
+					    	  <section class="nav-item dropdown">
+						     	 <button onclick="location.href='criarvaga.php';" class="btn btn-outline-success my-2 my-sm-0" id="newvaga">+ NOVA VAGA</button>
+						      </section>
+						    <form method="POST" class="form-inline my-2 my-lg-0">
+						      <button class="btn btn-outline-success my-2 my-sm-0" id="sair" type="submit" name="sair">Sair</button>
+						    </form>
+					  </div>
+				</nav>
+				<div id="h1vagas">
+					<h1>Encontre as melhores vagas do mercado</h1>
+				</div>
 			</div>
-			
-		</div>
+	       </div>
+	   </div>
 	<?php } ?>
-
+		
 
 
 	<!-- Logado como usuario -->
-	<?php if (isset($_SESSION['usuario']) && empty($_SESSION['success'])): ?>
-		<?php
-			echo "Bem vindo! "; 
-			echo $_SESSION['usuario']; 
-		?>
-		<form method="POST">
-			<input id="sair" type="submit" name="sair" value="sair">
-		</form>
-	<?php endif ?>
-	<!-- Não há ninguém logado -->
-	<?php if (empty($_SESSION['success']) && empty($_SESSION['usuario'])): ?>
-		<div id="loginbutton" class="d-flex justify-content-end">
-			<button><a href="loginAdmin.php">LOGIN</a></button>	
-		</div>
-		
-	<?php endif ?>
-		
-	<?php 
-		$vaga->exibeVagas();
+	<?php if (isset($_SESSION['usuario']) && empty($_SESSION['success'])) { ?>
+		<div class="container-fluid">
+			<div class="row">
+				<div id="col-principal" class="col-lg-12">
+					<nav class="navbar navbar-expand-lg navbar-light bg-light">
+					  	<h2 id="logo" href="#">VagasOnline.com</h2>
+						  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						  <span class="navbar-toggler-icon"></span>
+					 	  </button>
+						  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul id="loginmsg" class="navbar-nav mr-auto">
+								<?php echo "Bem-vindo! "; echo $_SESSION['usuario'];?>
+							</ul>
+								<form method="POST" class="form-inline my-2 my-lg-0">
+						      		<button class="btn btn-outline-success my-2 my-sm-0" id="sair" type="submit" name="sair">Sair</button>
+						   		 </form>
+						   </div>
+					</nav>
 
-	 ?> 
-	       </div>
-	   </div>
-    </div>
+					<div id="h1vagas">
+						<h1>Encontre as melhores vagas do mercado</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	<?php } ?>
+
+	<!-- Não há ninguém logado -->
+	<?php if (empty($_SESSION['success']) && empty($_SESSION['usuario'])) { ?>
+		<div class="container-fluid">
+			<div class="row">
+				<div id="col-principal" class="col-lg-12">
+					<nav class="navbar navbar-expand-lg navbar-light bg-light">
+					  	<h2 id="logo" href="#">VagasOnline.com</h2>
+						  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						  <span class="navbar-toggler-icon"></span>
+					 	  </button>
+						  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav mr-auto"></ul>
+								<button onclick="location.href='loginAdmin.php'" class="btn btn-outline-success my-2 my-sm-0" id="sair" type="submit" name="sair">Login</button>
+						   </div>
+					</nav>
+
+					<div id="h1vagas">
+						<h1>Encontre as melhores vagas do mercado</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+			<!-- Mostra todas as vagas -->
+			<?php } ?>
+				
+			<?php 
+				$vaga->exibeVagas();
+
+			 ?> 	
 
 
 

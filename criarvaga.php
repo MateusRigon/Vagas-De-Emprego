@@ -24,30 +24,54 @@
 	<title>Nova Vaga</title>
 </head>
 <body>
-	<?php if (isset($_SESSION['success'])) {?>
-	<?php echo $_SESSION['success']; ?>
-	<form method="POST">
-		<input id="sair" type="submit" name="sair" value="sair">
-	</form>
+	<div class="container-fluid">
+		<div class="row">
+			<div id="col-principal" class="col-lg-12">
+				<?php if (isset($_SESSION['success'])) {?>
+							<nav class="navbar navbar-expand-lg navbar-light bg-light">
+					  			<h2 id="logo" href="#">VagasOnline.com</h2>
+								  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+								    <span class="navbar-toggler-icon"></span>
+					 			  </button>
+
+									  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+									    <ul id="successmsg" class="navbar-nav mr-auto">
+									      		<?php echo $_SESSION['success']; ?>
+									    </ul>
+									    <form method="POST" class="form-inline my-2 my-lg-0">
+									      <button class="btn btn-outline-success my-2 my-sm-0" id="sair" type="submit" name="sair">Sair</button>
+									    </form>
+								  </div>
+							</nav>
+			</div>
+	       </div>
+	   </div>
+	   		<div id="form" class="form-group d-flex justify-content-center">
+				<form method="POST">
+					<input class="d-flex" type="text" placeholder="TITULO" name="titulo" required>
+					<input id="descricao" class="d-flex" type="text" placeholder="DESCRIÇÃO" name="descricao" required>
+					<input class="d-flex" type="text" placeholder="SALARIO" name="salario" required>
+					<input class="d-flex" type="text" placeholder="CIDADE" name="cidade" required>
+					<input class="d-flex" type="submit" value="CRIAR" name="criar">
+					<a class="d-flex justify-content-center" href="index.php">Cancelar</a>
+				</form>
+			</div>s
 	<?php } ?>	
 
-	<div id="form" class="form-group d-flex justify-content-center">
-		<form method="POST">
-			<input class="d-flex" type="text" placeholder="TITULO" name="titulo" required>
-			<input id="descricao" class="d-flex" type="text" placeholder="DESCRIÇÃO" name="descricao" required>
-			<input class="d-flex" type="text" placeholder="SALARIO" name="salario" required>
-			<input class="d-flex" type="text" placeholder="CIDADE" name="cidade" required>
-			<input class="d-flex" type="submit" value="CRIAR" name="criar">
-			<a class="d-flex justify-content-center" href="index.php">Cancelar</a>
-		</form>
-	</div>
+			
 
-	<?php 
-		if (isset($_POST['criar'])) {
-			$cad->cadastrar();
-			echo $msgDeSucesso;
-		}
-	 ?>
+		<?php 
+			if (isset($_POST['criar'])) {
+				$cad->cadastrar();
+				?>
+				<div class="d-flex justify-content-center" id="msgDeSucesso"><?php  echo $msgDeSucesso; ?></div>
+				<?php
+			}
+		 ?>
+			</div>
+		</div>
+	</div>
+	
 
 	<!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
