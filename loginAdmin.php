@@ -24,12 +24,12 @@
 		
 	<div id="formlogin" class="form-group d-flex justify-content-center">
 		<form method="POST">
-			<input class="d-flex mb-3" type="text" placeholder="login" name="login" required> 
+			<input class="d-flex mb-3 mt-2" type="text" placeholder="login" name="login" required> 
 			<input class="d-flex mb-3" type="password" placeholder="senha" name="senha" required>
-			<input id="entrar" class="d-flex" type="submit" value="ENTRAR" name="entrar">
+			<input id="entrar" class="btn btn-success d-flex" type="submit" value="ENTRAR" name="entrar">
 		</form> 
 	</div>
-	<a class="d-flex justify-content-center" href="index.php">Cancelar</a>	
+	<a id="cancelar" class="d-flex justify-content-center" href="index.php">Cancelar</a>	
 	</div>
 </div>	
 	

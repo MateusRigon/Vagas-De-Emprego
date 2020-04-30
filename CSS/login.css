@@ -18,12 +18,17 @@ body{
 input{
   height: 40px;
   border-radius: 20px;
-  border: 1px solid #f1f1f1;
+  border: 1px solid gray;
   width: 20rem;
   outline: none;
-  padding-left: 12px;
+  padding-left: 20px;
   font-size: 20px;
 }
 #entrar{
-	padding-left: 38%;
+	padding-left: 40%;
+  border-radius: 20px;
+}
+#cancelar{
+  color: black;
+  margin-right: 2px;
 }

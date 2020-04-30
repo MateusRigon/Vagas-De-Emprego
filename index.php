@@ -40,10 +40,10 @@
 						      		<?php echo $_SESSION['success']; ?>
 						    </ul>
 					    	  <section class="nav-item dropdown">
-						     	 <button onclick="location.href='criarvaga.php';" class="btn btn-outline-success my-2 my-sm-0" id="newvaga">+ NOVA VAGA</button>
+						     	 <button onclick="location.href='criarvaga.php'" class="btn btn-outline-success my-2 my-sm-0" id="novavaga">+ NOVA VAGA</button>
 						      </section>
 						    <form method="POST" class="form-inline my-2 my-lg-0">
-						      <button class="btn btn-outline-success my-2 my-sm-0" id="sair" type="submit" name="sair">Sair</button>
+						      <button id="sair" class="btn btn-outline-success my-2 my-sm-0" id="sair" type="submit" name="sair">Sair</button>
 						    </form>
 					  </div>
 				</nav>

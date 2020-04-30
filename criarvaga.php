@@ -43,19 +43,18 @@
 									    </form>
 								  </div>
 							</nav>
-			</div>
-	       </div>
-	   </div>
-	   		<div id="form" class="form-group d-flex justify-content-center">
+		
+
+	   		<div id="form" class="form-group">
 				<form method="POST">
-					<input class="d-flex" type="text" placeholder="TITULO" name="titulo" required>
-					<input id="descricao" class="d-flex" type="text" placeholder="DESCRIÇÃO" name="descricao" required>
-					<input class="d-flex" type="text" placeholder="SALARIO" name="salario" required>
-					<input class="d-flex" type="text" placeholder="CIDADE" name="cidade" required>
-					<input class="d-flex" type="submit" value="CRIAR" name="criar">
-					<a class="d-flex justify-content-center" href="index.php">Cancelar</a>
+					<input class="d-flex mb-3" type="text" placeholder="TÍTULO" name="titulo" required>
+					<input id="descricao" class="mb-3" type="text" placeholder="DESCRIÇÃO" name="descricao" required></input>
+					<input class="d-flex mb-3" type="text" placeholder="SALÁRIO" name="salario" required>
+					<input class="d-flex mb-3" type="text" placeholder="CIDADE" name="cidade" required>
+					<input id="criar" class="d-flex mb-3 btn-success" type="submit" value="CRIAR" name="criar">
+					<a id="cancelar" class="d-flex " href="index.php">Cancelar</a>
 				</form>
-			</div>s
+			</div>
 	<?php } ?>	
 
 			

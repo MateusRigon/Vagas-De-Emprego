@@ -36,11 +36,11 @@
 		 		if ($total > 0) {
 		 			do {
 		 		?>
-		 				<div id="coluna" class="col-lg-4 col-md-6 col-sm-10 col-10">		
+		 				<div id="coluna" class="col-lg-4 col-md-6 col-sm-10 col-12">		
 		 					<div id="vagas" class="">
 		 							<button class="btn btn-outline-success active" id="titulo"><?php echo $array['titulo'];?></button>
 		 						
-									<div id="descricao"><li><?php echo $array['descricao'];?> <a href=""></a></li></div>
+									<div id="descricao"><li><?php echo $array['descricao'];?></li></div>
 		 							<hr>
 		 							<div id="salario">R$ <?php echo $array['salario'];?> - <?php echo $array['cidade'];?></div>
 

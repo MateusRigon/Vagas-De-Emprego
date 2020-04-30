@@ -8,5 +8,34 @@ body{
 	padding: 0;
 }
 #form{
-	margin-top: 12vw;
+	margin-top: 5vw;
+	margin-left: 10vw;
+}
+input{
+	height: 40px;
+	width: 30rem;
+	padding-left: 10px;
+	border-radius: 20px;
+	border: 1px solid gray;
+	outline: none;
+}
+#criar{
+	padding-left: 13rem;
+	border: none;
+}
+#descricao{
+	float: right;
+	margin-right: 10vw;
+	margin-top: -4vw;
+	resize: none;
+	height: 20rem;
+	display: block;
+	width: 30rem;
+	padding-left: 10px;
+	padding-bottom: 17rem;
+}
+
+#cancelar{
+	color:black;
+	margin-left: 12.6rem;
 }
