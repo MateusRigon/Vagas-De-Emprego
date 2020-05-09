@@ -27,7 +27,7 @@
 
 
 			if (mysqli_num_rows($query) <= 0) {
-				$msgErro = "login não existe";
+				$msgErro = "Login e/ou senha não existente.";
 			}else {
 				session_start();
 				$_SESSION['usuario'] = $login; 

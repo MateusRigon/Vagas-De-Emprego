@@ -7,7 +7,6 @@
 		header("location: loginAdmin.php");
 		session_destroy();
 	}
-
  ?>	
 
 <!DOCTYPE html>
@@ -47,6 +46,10 @@
 						    </form>
 					  </div>
 				</nav>
+				<form method="POST">
+					<label>Excluir vaga: </label> <input id="codigo" placeholder="Ex: 91,92" type="text" name="codigo">
+					<input type="submit" name="excluir" value="X">
+				</form>
 				<div id="h1vagas">
 					<h1>Encontre as melhores vagas do mercado</h1>
 				</div>
@@ -112,9 +115,9 @@
 				
 			<?php 
 				$vaga->exibeVagas();
-
+				$vaga->excluirVaga();
 			 ?> 	
-
+			 
 
 
 

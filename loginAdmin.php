@@ -29,16 +29,18 @@
 			<input id="entrar" class="btn btn-success d-flex" type="submit" value="ENTRAR" name="entrar">
 		</form> 
 	</div>
-	<a id="cancelar" class="d-flex justify-content-center" href="index.php">Cancelar</a>	
-	</div>
-</div>	
-	
-<?php 
-	if(isset($_POST['entrar'])){
+	<a id="cancelar" class="d-flex justify-content-center" href="index.php">Cancelar</a>
+	<?php 
+		if(isset($_POST['entrar'])){
 		$u->logar();
-		echo $msgErro;
+		?>
+		<div class="d-flex justify-content-center mt-2"><?php echo $msgErro; ?></div>
+		<?php 
 	}
  ?>
+
+	</div>
+</div>	
 
 </body>
 </html>

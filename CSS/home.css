@@ -52,7 +52,7 @@ hr{
 
 #h1vagas{
 	text-align: center;
-	margin-top: 12vw;
+	margin-top: 9rem;
 }
 #col-principal{
 	padding: 0;
@@ -80,5 +80,11 @@ hr{
 	#successmsg {display: none;}
 	#sair{ margin-left: 20.5rem;}
 	#novavaga{margin-left: 15.7rem;}
-
+}
+#excluir input{
+	font-size: 22px;
+	width: 40px;
+}
+#codigo{
+	width: 5rem;
 }

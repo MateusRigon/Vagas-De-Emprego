@@ -1,6 +1,9 @@
 #successmsg{
 	margin-left: 60vw;
 }
+#msgDeSucesso{
+	margin-left: 18vw;
+}
 body{
 	background-color: #f1f1f1;
 }
@@ -24,7 +27,6 @@ input{
 	border: none;
 }
 #descricao{
-	float: right;
 	margin-right: 10vw;
 	margin-top: -4vw;
 	resize: none;
@@ -34,8 +36,24 @@ input{
 	padding-left: 10px;
 	padding-bottom: 17rem;
 }
-
+@media only screen and (min-width: 1200px){
+	#descricao{ float: right; }
+}
+@media only screen and (min-width: 500px) and (max-width: 1199px){
+	#descricao{margin-top: 20px;}
+}
+@media only screen and (min-width: 501px){
+	#cancelar{margin-left: 12.5rem;}
+}
+@media only screen and (max-width: 500px){
+	#form{margin-left: 8px;}
+	input{width: 25rem;}
+	#descricao{width: 25rem; margin-top: 20px;}
+	#criar{padding-left: 11rem;}
+	#cancelar{margin-left: 10.5rem;}
+	#sair{ margin-left: 20.5rem;}
+	#successmsg {display: none;}
+}
 #cancelar{
-	color:black;
-	margin-left: 12.6rem;
+	color: black;
 }

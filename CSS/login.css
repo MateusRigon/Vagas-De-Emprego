@@ -8,13 +8,16 @@
 	margin-top: 4rem;
 }
 @media only screen and (max-width: 500px) { 
-  .container{ height: 20rem; }
-  #colunalogin{margin: 8rem 8%;}
+  .container{ height: 20rem; width: 25rem;}
+  #colunalogin{margin: 8rem -9px;}
+} 
+@media only screen and (min-width: 3000px) { 
+  .container{padding-top: 6rem;}
+  #colunalogin{margin-top: 15rem;}
 } 
 body{
 	background-color: #f1f1f1;
 }
-
 input{
   height: 40px;
   border-radius: 20px;

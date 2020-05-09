@@ -52,7 +52,7 @@
 					<input class="d-flex mb-3" type="text" placeholder="SALÁRIO" name="salario" required>
 					<input class="d-flex mb-3" type="text" placeholder="CIDADE" name="cidade" required>
 					<input id="criar" class="d-flex mb-3 btn-success" type="submit" value="CRIAR" name="criar">
-					<a id="cancelar" class="d-flex " href="index.php">Cancelar</a>
+					<a id="cancelar" href="index.php">Cancelar</a>
 				</form>
 			</div>
 	<?php } ?>	
@@ -63,7 +63,7 @@
 			if (isset($_POST['criar'])) {
 				$cad->cadastrar();
 				?>
-				<div class="d-flex justify-content-center" id="msgDeSucesso"><?php  echo $msgDeSucesso; ?></div>
+				<div class="d-flex" id="msgDeSucesso"><?php  echo $msgDeSucesso; ?></div>
 				<?php
 			}
 		 ?>
