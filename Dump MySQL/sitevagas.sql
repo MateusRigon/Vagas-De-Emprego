@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 24-Abr-2020 às 17:36
+-- Tempo de geração: 20-Maio-2020 às 00:36
 -- Versão do servidor: 10.4.11-MariaDB
 -- versão do PHP: 7.4.3
 
@@ -39,7 +39,8 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`codigo`, `login`, `senha`) VALUES
-(4, 'admin', '1234');
+(4, 'admin', '1234'),
+(6, 'mateus', '1234');
 
 -- --------------------------------------------------------
 
@@ -51,8 +52,18 @@ CREATE TABLE `vagas` (
   `codigo` int(11) NOT NULL,
   `titulo` varchar(30) NOT NULL,
   `descricao` varchar(1000) NOT NULL,
-  `salario` varchar(40) NOT NULL
+  `salario` varchar(40) NOT NULL,
+  `cidade` varchar(40) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `vagas`
+--
+
+INSERT INTO `vagas` (`codigo`, `titulo`, `descricao`, `salario`, `cidade`) VALUES
+(97, 'Programador node', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in egestas nibh, ac laoreet nulla. Pellentesque hendrerit semper quam, non scelerisque lorem varius a. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc eget bibendum sem. Duis nec purus in libero efficitur ultricies. Praesent id neque eget massa gravida tincidunt ac efficitur lorem. Mauris imperdiet consequat sollicitudin. Interdum et malesuada fames ac ante ipsum primis in faucibus.', '2500', 'Porto Alegre'),
+(98, 'Programador PHP', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in egestas nibh, ac laoreet nulla. Pellentesque hendrerit semper quam, non scelerisque lorem varius a. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc eget bibendum sem. Duis nec purus in libero efficitur ultricies. Praesent id neque eget massa gravida tincidunt ac efficitur lorem. Mauris imperdiet consequat sollicitudin. Interdum et malesuada fames ac ante ipsum primis in faucibus.', '2500', 'Porto Alegre'),
+(99, 'Programador node', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in egestas nibh, ac laoreet nulla. Pellentesque hendrerit semper quam, non scelerisque lorem varius a. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc eget bibendum sem. Duis nec purus in libero efficitur ultricies. Praesent id neque eget massa gravida tincidunt ac efficitur lorem. Mauris imperdiet consequat sollicitudin. Interdum et malesuada fames ac ante ipsum primis in faucibus.', '2500', 'Esteio');
 
 --
 -- Índices para tabelas despejadas
@@ -78,13 +89,13 @@ ALTER TABLE `vagas`
 -- AUTO_INCREMENT de tabela `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de tabela `vagas`
 --
 ALTER TABLE `vagas`
-  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
